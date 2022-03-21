@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\DeviceController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dispositivos', function () {
-    return view('devices.indexDevices');
-    
-});
+Route::resource('/devices', DeviceController::class);
+
+// Route::get('/devices', [DevicesController::class, 'index']);
+
+// Route::get('/devices/new',[DevicesController::class, 'create']);
+
+// Route::post('/devices/store',[DevicesController::class, 'store'] );
