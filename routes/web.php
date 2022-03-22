@@ -25,3 +25,6 @@ Route::resource('/devices', DeviceController::class);
 // Route::get('/devices/new',[DevicesController::class, 'create']);
 
 // Route::post('/devices/store',[DevicesController::class, 'store'] );
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');

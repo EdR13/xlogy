@@ -91,7 +91,6 @@ class DeviceController extends Controller
         $device -> os = $request->os;
         $device -> released = $request->released;
         $device -> price = $request->price;
-
         $device ->save();
 
         return redirect('/devices');
@@ -141,7 +140,7 @@ class DeviceController extends Controller
 
         $device ->save();
 
-        return redirect('/devices/'. $device->id);
+        return redirect('/devices'. $device->id);
     }
 
     /**
@@ -153,6 +152,6 @@ class DeviceController extends Controller
     public function destroy(Device $device)
     {
         $device -> delete();
-        return redirect('/devices/');
+        return redirect('/devices');
     }
 }
