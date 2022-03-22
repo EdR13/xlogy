@@ -18,12 +18,12 @@
     @section('content')
         @livewireScripts
         @isset($device)
-            <h1>Edit Device: </h1>
+            <h1 class="text-center">Edit Device: </h1>
 
             <form action="/devices/{{ $device->id }}" method="POST">
                 @method('PATCH')
         @else
-            <h1>Add New Device: </h1>
+            <h1 class="text-center">Add New Device: </h1>
 
             <form action="/devices" method="POST">
         @endisset
@@ -48,7 +48,7 @@
                 <select name="brand" id="brand" required class="form-control">
                     <option></option>
                     @foreach ($brands as $brand)
-                        <option value="{{ $brand }}"{{ isset($device) && $device->brand == $brand ? 'selected' : '' }}>{{ $brand }}</option>
+                        <option value="{{ $brand }}"{{ isset($device) && $device->brand == $brand ? 'selected' : old('brand') }}>{{ $brand }}</option>
                     @endforeach
                 </select>
             </div>
@@ -75,7 +75,7 @@
                 <select name="os" id="os" required class="form-control">
                     <option></option>
                     @foreach ($os as $os)
-                        <option value="{{ $os }}"{{  isset($device) && $device->os == $os ? 'selected' : '' }}>{{ $os }}</option>
+                        <option value="{{ $os }}"{{  isset($device) && $device->os == $os ? 'selected' : old('os') }}>{{ $os }}</option>
                     @endforeach
                 </select>
             </div>
@@ -97,7 +97,7 @@
                 @enderror
             </div>
             <a href="/devices" class="btn btn-secondary">Cancel</a>
-            <input type="submit" class="btn btn-primary" value="Save">
+            <button type="submit" class="btn btn-primary">Save</button>
         </form>
     @endsection
     

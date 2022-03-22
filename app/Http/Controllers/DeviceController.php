@@ -140,7 +140,7 @@ class DeviceController extends Controller
 
         $device ->save();
 
-        return redirect('/devices'. $device->id);
+        return redirect('/devices/'. $device->id);
     }
 
     /**
