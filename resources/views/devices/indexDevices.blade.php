@@ -30,44 +30,44 @@
                     <td  >{{ $device->model }}</td>
                     @if($device->brand == "Apple")
                         <td  ><x-si-apple height="30" alt="Apple"/></td>
-                        <td  ><x-si-ios height="20" alt="iOS"/></td>
+                        <td  ><x-si-ios height="40" alt="iOS"/></td>
                     @else
                         @if($device->brand == "Samsung")
                             <td  ><x-si-samsung alt="Samsung"/></td>
                         @elseif($device->brand == "Huawei")
-                            <td  ><x-si-huawei height="20" alt="Huawei"/></td>
+                            <td  ><x-si-huawei height="40" alt="Huawei"/></td>
                         @elseif($device->brand == "Google")
-                            <td  ><x-si-google height="20" alt="Google"/></td>
+                            <td  ><x-si-google height="40" alt="Google"/></td>
                         @elseif($device->brand == "Motorola")
-                            <td  ><x-si-motorola height="20" alt="Motorola"/></td>
+                            <td  ><x-si-motorola height="40" alt="Motorola"/></td>
                         @elseif($device->brand == "Xiaomi")
-                            <td  ><x-si-xiaomi height="20" alt="Xiaomi"/></td>
+                            <td  ><x-si-xiaomi height="40" alt="Xiaomi"/></td>
                         @elseif($device->brand == "Sony")
-                            <td  ><x-si-sony height="20" alt="Sony"/></td>
+                            <td  ><x-si-sony height="40" alt="Sony"/></td>
                         @elseif($device->brand == "One Plus")
-                            <td  ><x-si-oneplus height="20" alt="One Plus"/></td>
+                            <td  ><x-si-oneplus height="40" alt="One Plus"/></td>
                         @elseif($device->brand == "Nokia")
-                            <td  ><x-si-nokia height="20" alt="Nokia"/></td>
+                            <td  ><x-si-nokia height="40" alt="Nokia"/></td>
                         @elseif($device->brand == "LG")
-                            <td  ><x-si-lg height="20" alt="LG"/></td>
+                            <td  ><x-si-lg height="40" alt="LG"/></td>
                         @elseif($device->brand == "Lenovo")
-                            <td  ><x-si-lenovo height="20" alt="Lenovo"/></td>
+                            <td  ><x-si-lenovo height="40" alt="Lenovo"/></td>
                         @elseif($device->brand == "Asus")
-                            <td  ><x-si-asus height="20" alt="Asus"/></td>
+                            <td  ><x-si-asus height="40" alt="Asus"/></td>
                         @elseif($device->brand == "Acer")
-                            <td  ><x-si-acer height="20" alt="Acer"/></td>
+                            <td  ><x-si-acer height="40" alt="Acer"/></td>
                         @else
                             <td  >{{ $device->brand }}</td>
                         @endif
-                        <td  ><x-si-android  height="20" alt="Android"/></td>
+                        <td  ><x-si-android  height="40" alt="Android"/></td>
                     @endif
                     <td  >{{ $device->ram }} GB</td>
                     <td  >{{ $device->storage }} GB</td>
                     <td  >{{ $device->released }}</td>
                     <td  >${{ $device->price }}</td>
                     <td  >
-                        <a href="/devices/{{ $device->id }}"><x-carbon-view height="20" alt="View Details"/></a>
-                        <a href="/devices/{{ $device->id }}/edit"><x-carbon-edit height="20" alt="Edit"/></a>
+                        <a href="/devices/{{ $device->id }}"><x-carbon-view height="40" alt="View Details"/></a>
+                        <a href="/devices/{{ $device->id }}/edit"><x-carbon-edit height="40" alt="Edit"/></a>
                         <form method="POST" action="/devices/{{ $device->id }}">
                             @csrf
                             @method('DELETE')
