@@ -44,7 +44,7 @@
                             <td  ><x-si-xiaomi height="40" alt="Xiaomi"/></td>
                         @elseif($device->brand == "Sony")
                             <td  ><x-si-sony height="40" alt="Sony"/></td>
-                        @elseif($device->brand == "One Plus")
+                        @elseif($device->brand == "OnePlus")
                             <td  ><x-si-oneplus height="40" alt="One Plus"/></td>
                         @elseif($device->brand == "Nokia")
                             <td  ><x-si-nokia height="40" alt="Nokia"/></td>
